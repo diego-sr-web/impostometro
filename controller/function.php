@@ -1,4 +1,11 @@
 <?php
+  function convertNumero($valor)
+  {
+    setlocale(LC_MONETARY, 'pt_BR.UTF-8');
+    $valorFormatado = number_format($valor, 2, ',', '.');
+    return $valorFormatado;
+  }
+  
   function converterParaBlr($valor)
   {
     setlocale(LC_MONETARY, 'pt_BR.UTF-8');
@@ -125,7 +132,7 @@
   function btcSemanal()
   {
     $symbol = 'BTC-BRL';
-    $apiUrl = "https://economia.awesomeapi.com.br/json/daily/$symbol/10";
+    $apiUrl = "https://economia.awesomeapi.com.br/json/daily/$symbol/30";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $apiUrl);
@@ -184,7 +191,7 @@
   function dolarSemanal()
   {
     $symbol = 'USD-BRL';
-    $apiUrl = "https://economia.awesomeapi.com.br/json/daily/$symbol/10";
+    $apiUrl = "https://economia.awesomeapi.com.br/json/daily/$symbol/30";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $apiUrl);

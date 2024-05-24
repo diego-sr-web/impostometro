@@ -3,8 +3,7 @@ function recarregarPagina() {
     location.reload();
   }, 15 * 60 * 1000);
 } // 15 minutos * 60 segundos * 1000 milissegundos
-
-window.onload = recarregarPagina;
+//window.onload = recarregarPagina;
 
 
 
